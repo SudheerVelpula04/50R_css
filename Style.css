@@ -164,9 +164,84 @@ body,html{
 }
 .footer-container>.fa{
     font-size: 2rem;
+    transition: 0.8s ease;
+    letter-spacing: 5px;
     
 }
 .footer-container>.fa:hover{
     color: burlywood;
     cursor: pointer;
+    font-size: 2.3rem;
+}
+.menu{
+    display: none;
+}
+
+/* media query */
+
+@media screen and (max-width:400px) {
+    .link-container>.links{
+        display:none ;
+    }
+    .menu{
+        font-size: 3rem;
+        display: inline-block;
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        
+    }
+    .text-container{
+        line-height: 80px;
+        
+    }
+    .text-container>p:nth-child(1){
+        font-size: 3rem;
+        letter-spacing: 5px;
+    }
+    .text-container>p:nth-child(2){
+        font-size: 1rem;
+    }
+    .text-container>.button>button{
+        padding: 5px;
+        width: 100px;
+    }
+    .anchor-container{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin: 0px 0px;
+    }
+    .lorem-container>p:nth-child(3){
+        display: none;
+    }
+    .lorem-container>p:nth-child(1){
+        padding: 10px 0px;
+    }
+    .lorem-container>p:nth-child(2){
+        padding: 10px 0px;
+    }
+    .icon-container>.fa{
+        font-size: 10rem;
+    }
+    .anchor-container2{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .lorem-container2>p:nth-child(3){
+        display: none;
+    }
+    .lorem-container2>p:nth-child(1){
+        padding: 10px 0px;
+    }
+    .lorem-container2>p:nth-child(2){
+        padding: 10px 0px;
+    }
+    .icon-container2>.fa{
+        font-size: 10rem;
+    }
+    .home-container{
+        font-size: 1.5rem;
+    }
 }
