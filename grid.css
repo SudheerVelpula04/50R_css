@@ -1,72 +1,41 @@
-.item-1{
-    background-color: aqua;
-    grid-area: a;
+*{
+    margin: 0;
+    box-sizing: border-box;
 }
-.item-2{
-    background-color: pink;
-    grid-area: b;
-}
-.item-3{
-    background-color: gray;
-    grid-area: c;
-}
-.item-4{
-    background-color: yellowgreen;
-    grid-area: d;
-}
-.item-5{
-    background-color: skyblue;
-    grid-area: e;
-}
-.item-6{
-    background-color: rgb(32, 206, 162);
-    grid-area: f;
-}
-.item-7{
-    background-color: rgb(147, 216, 35);
-    grid-area: g;
-}
-.item-8{
-    background-color: rgb(225, 29, 137);
-    grid-area: h;
-}
-
-.item{
-    font-size: 1.5rem;
-    text-align: center;
-}
-.container{
+.image-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    height: 100vh;
     gap: 10px;
-    grid-template-areas: 
-    'a b b c'
-    'a d e f'
-    'a g h f';
 }
-@media screen and (max-width: 500px) {
-    .container{
+.image-container>div{
+    position: relative;
+}
+.image-container>div>p{
+    position: absolute;
+    top: 0px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+img{
+    width: 100%;
+}
+@media screen and (max-width: 400px) {
+    .image-container{
         grid-template-columns: 1fr;
-        grid-template-areas: 
-        'a'
-        'b'
-        'c'
-        'd'
-        'e'
-        'f'
-        'g'
-        'h';
     }
+       .image-container>div>p{
+        padding: 5px;
+        font-size: 0.9rem;
+    }
+
 }
-@media screen and (min-width: 500px) and (max-width: 800px) {
-    .container{
+@media screen and (min-width:400px) and (max-width:900px) {
+    .image-container{
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-        'a b'
-        'c d'
-        'e f'
-        'g h';
     }
-    
+    .image-container>div>p{
+        padding: 2px;
+        font-size: 0.5rem;
+    }
 }
